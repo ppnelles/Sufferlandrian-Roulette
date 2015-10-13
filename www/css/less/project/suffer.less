@@ -269,16 +269,7 @@ a.reset {
 footer {
   width: 100%; 
   padding: 0.5em 0;
-  background-color: @text-color;
-  color: white;
   font-size: 90%; 
-
-  @media(min-width: 830px) {
-    position: absolute;
-    top: 0; 
-    left: 0;  
-    margin: 0;  
-  }
 
   div {
     .ctn(@max-screen);
@@ -287,21 +278,28 @@ footer {
   p {
     text-align: center;
     margin: 0;
+  }
 
-    @media(min-width: 830px) {
+  @media(min-width: 830px) {
+    position: absolute;
+    top: 0; 
+    left: 0;  
+    margin: 0;  
+    background-color: @text-color;
+    color: white;
+
+    p {
       text-align: left;
       width: 50%;
       float: left;
     }
-  }
 
-  p.author {
-    @media(min-width: 830px) {
+    p.author {
       text-align: right;
     }
-  }
 
-  a {
-    color: white;
+    a {
+      color: white;
+    }
   }
 }
