@@ -32,3 +32,7 @@ $(".randomVid").click(function(){
 $(".reset").click(function(){
     $('body').attr('class','choose');
 })
+
+$("#selectall").change(function(){
+    $("input").prop('checked', $(this).prop("checked"));
+});
