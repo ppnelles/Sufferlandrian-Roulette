@@ -1,4 +1,16 @@
-$("#randomVid").click(function(){
+$(window).load(function() {
+    if (localStorage["videos"] != null) {
+        var stored = JSON.parse(localStorage["videos"]);
+
+        for (i=0; i!=stored.length;i++) {
+            var checkbox = $("input[type='checkbox'][value='"+stored[i]+"']");
+            checkbox.attr("checked","checked");
+        }
+    }
+
+});
+
+$(".randomVid").click(function(){
     var videos = $("input:checkbox:checked").map(function(){
         return this.value;
     }).toArray();
@@ -16,18 +28,7 @@ $("#randomVid").click(function(){
     localStorage["videos"] = JSON.stringify(videos);
   })
 
-$(window).load(function() {
-	if (localStorage["videos"] != null) {
-	    var stored = JSON.parse(localStorage["videos"]);
 
-	    for (i=0; i!=stored.length;i++) {
-	        var checkbox = $("input[type='checkbox'][value='"+stored[i]+"']");
-	        checkbox.attr("checked","checked");
-	    }
-	}
-
-});
-
-$("#reset").click(function(){
+$(".reset").click(function(){
     $('body').attr('class','choose');
 })

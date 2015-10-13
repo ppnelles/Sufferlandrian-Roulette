@@ -1,0 +1,27 @@
+.ctn(@max) {
+	width: 90%;
+	max-width: @max;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.columns (@arguments) {
+    -webkit-columns: @arguments;
+    -moz-columns: @arguments;
+    columns: @arguments;
+}
+
+.logo-svg(@url, @width, @height) {
+  display: block;
+  width: @width;
+  height: @height;
+  white-space: nowrap;
+  background-color: transparent; 
+  background-image: url("../img/@{url}.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  margin: 0 auto;
+}
