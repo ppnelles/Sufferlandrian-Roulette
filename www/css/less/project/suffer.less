@@ -7,13 +7,6 @@
   display: none;
 }
 
-body.error,
-body.result {
-  header {
-    display: none;
-  }
-}
-
 body.error {
 
   .error-msg {
@@ -23,6 +16,10 @@ body.error {
 }
 
 body.result {
+
+  header {
+    display: none;
+  }
 
   #choose {
     display: none;
@@ -260,6 +257,10 @@ a.reset {
   padding: 1em;
   text-align: center;
   margin: 0 0 2em;
+
+  h1:before {
+    display: none;
+  }
 
   p {
     margin: 1em 0 0;

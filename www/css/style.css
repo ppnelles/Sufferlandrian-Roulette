@@ -2,12 +2,11 @@
 #results {
   display: none;
 }
-body.error header,
-body.result header {
-  display: none;
-}
 body.error .error-msg {
   display: block;
+}
+body.result header {
+  display: none;
 }
 body.result #choose {
   display: none;
@@ -233,6 +232,9 @@ a.reset {
   padding: 1em;
   text-align: center;
   margin: 0 0 2em;
+}
+.error-msg h1:before {
+  display: none;
 }
 .error-msg p {
   margin: 1em 0 0;
