@@ -14,11 +14,17 @@ $(".randomVid").click(function(){
     var videos = $("input:checkbox:checked").map(function(){
         return this.value;
     }).toArray();
-    
+        
     var video = videos[Math.floor(Math.random()*videos.length)];
 
     if (video != null) {
-    	$('#painshake').text(video);
+	    var commands = $("#commands li").map(function() {
+			return $(this).html().replace('-painshake-','<b id="painshake">'+video+'</b>');	    
+	    });
+		var command = commands[Math.floor(Math.random()*commands.length)];
+	    
+	    
+    	$('#results h1').html(command);
         $('body').attr('class','result');
     }
     else {
