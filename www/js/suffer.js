@@ -3,7 +3,7 @@ $(window).load(function() {
         var stored = JSON.parse(localStorage["videos"]);
 
         for (i=0; i!=stored.length;i++) {
-            var checkbox = $("input[type='checkbox'][value='"+stored[i]+"']");
+            var checkbox = $("li input[type='checkbox'][value='"+stored[i]+"']");
             checkbox.attr("checked","checked");
         }
     }
@@ -14,11 +14,15 @@ $(".randomVid").click(function(){
     var videos = $("input:checkbox:checked").map(function(){
         return this.value;
     }).toArray();
+        
+    var orders = ["GvA orders you to do -painshake-", "Do -painshake- or get flogged by minions", "Fluffy is hungry, do -painshake- or else", "Don't be a wretched, do -painshake-", "Do -painshake- to fight your inner couchlandrian"];
     
     var video = videos[Math.floor(Math.random()*videos.length)];
+    var order = orders[Math.floor(Math.random()*orders.length)]; 
+    var result = order.replace('-painshake-','<b id="painshake">'+video+'</b>');
 
     if (video != null) {
-    	$('#painshake').text(video);
+    	$('#results h1').html(result);
         $('body').attr('class','result');
     }
     else {
