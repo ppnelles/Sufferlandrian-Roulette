@@ -31,6 +31,16 @@ body.result {
 
 }
 
+.more-options {
+  &.close {
+    display: none;
+  }
+
+  &.open {
+    display: block;
+  }
+}
+
 
 // ==========================================================================
 // Links
@@ -76,6 +86,22 @@ button {
   }
 }
 
+input[type="button"] {
+  background-color: transparent;
+  text-align: left;
+  border: none;
+  font-family: @font-family-base;
+  color: @text-color;
+  font-size: 14px;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+    color: @branding-color;
+  }
+}
 
 // ==========================================================================
 // Scaffolding
@@ -248,8 +274,16 @@ section {
 
 }
 
-.more-options {
+input.toggle-options {
+  display: block;
+  width: 100%;
+  margin: 2em 0 0;
+  text-decoration: none;
+  padding: 0 0 0.5em;
+  border-bottom: 1px solid lighten(@text-color, 50%);
+}
 
+.more-options {
   p {
     margin: 1.5em 0 0.35em;
   }

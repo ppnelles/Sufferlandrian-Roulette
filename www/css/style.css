@@ -14,6 +14,12 @@ body.result #choose {
 body.result #results {
   display: block;
 }
+.more-options.close {
+  display: none;
+}
+.more-options.open {
+  display: block;
+}
 a {
   color: #474747;
   text-decoration: underline;
@@ -47,6 +53,21 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #9a0c10;
+}
+input[type="button"] {
+  background-color: transparent;
+  text-align: left;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #474747;
+  font-size: 14px;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+}
+input[type="button"]:hover {
+  cursor: pointer;
+  color: #ed1f24;
 }
 * {
   box-sizing: border-box;
@@ -228,6 +249,14 @@ section {
 }
 .videos div.actions {
   text-align: center;
+}
+input.toggle-options {
+  display: block;
+  width: 100%;
+  margin: 2em 0 0;
+  text-decoration: none;
+  padding: 0 0 0.5em;
+  border-bottom: 1px solid #c7c7c7;
 }
 .more-options p {
   margin: 1.5em 0 0.35em;

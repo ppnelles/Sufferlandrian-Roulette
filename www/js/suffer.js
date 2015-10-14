@@ -11,7 +11,7 @@ $(window).load(function() {
 });
 
 $(".randomVid").click(function(){
-    var videos = $("input:checkbox:checked").map(function(){
+    var videos = $(".all-videos input:checkbox:checked").map(function(){
         return this.value;
     }).toArray();
         
@@ -48,3 +48,16 @@ $(".select-workout-type").change(function(){
     $(this).prop('checked', true);
     $(".all-videos input[data-workout-type='"+workouttype+"']").prop('checked', true);
 });
+
+$(".toggle-options").click(function(){
+    $(this).toggleClass("open close");
+    $(".more-options").toggleClass("open close");
+
+    if ($(this).hasClass('open')) {
+        $(this).val("[-] Close options");
+    }
+    else {
+        $(this).val("[+] Open options");
+    }
+
+})
