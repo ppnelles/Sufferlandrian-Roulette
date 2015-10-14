@@ -15,7 +15,7 @@
 		<main>
 	    	<header>
 	    		<h1>Sufferlandrian <b>Roulette</b></h1>
-	    		<p>
+	    		<p class="intro">
 	    			Like the Russian one, but with <b>100% chance</b> of getting really really hurt.
 	    		</p>
 	    	</header>
@@ -29,7 +29,7 @@
 				</div>
 
 				<div class="videos">
-						<p>
+						<p class="intro">
 							Sometimes, you don't feel like choosing. That's ok, we can choose for you. Simply check the videos you own, pull the trigger and Grunter von Agony will make you a great painshake...
 						</p>
 
@@ -38,17 +38,17 @@
 							<label for="selectall">Select/Unselect All</label>
 						</div>
 
-						<ol>
+						<ol class="all-videos">
 							<li>
 								<input type="checkbox" id="avp" value="A Very Dark Place" data-workout-type="speed" name="options[]">
 								<label for="avp">A Very Dark Place</label>
 							</li>
 							<li>
-								<input type="checkbox" id="angels" value="Angels" data-workout-type="speed" name="options[]">
+								<input type="checkbox" id="angels" value="Angels" data-workout-type="climbing" name="options[]">
 								<label for="angels">Angels</label>
 							</li>
 							<li>
-								<input type="checkbox" id="blender" value="Blender" name="options[]">
+								<input type="checkbox" id="blender" value="Blender" data-workout-type="endurance" name="options[]">
 								<label for="blender">Blender</label>
 							</li>
 							<li>
@@ -56,51 +56,51 @@
 								<label for="chrys">Chrysalis</label>
 							</li>
 							<li>
-								<input type="checkbox" id="downward" value="Downward Spiral" name="options[]">
+								<input type="checkbox" id="downward" value="Downward Spiral" data-workout-type="speed" name="options[]">
 								<label for="downward">Downward Spiral</label>
 							</li>
 							<li>
-								<input type="checkbox" id="elements" value="Elements of style" name="options[]">
+								<input type="checkbox" id="elements" value="Elements of style" data-workout-type="style" name="options[]">
 								<label for="elements">Elements of style</label>
 							</li>
 							<li>
-								<input type="checkbox" id="extra" value="Extra Shot" name="options[]">
+								<input type="checkbox" id="extra" value="Extra Shot" data-workout-type="racing" name="options[]">
 								<label for="extra">Extra Shot</label>
 							</li>
 							<li>
-								<input type="checkbox" id="fight" value="Fight Club" name="options[]">
+								<input type="checkbox" id="fight" value="Fight Club" data-workout-type="racing" name="options[]">
 								<label for="fight">Fight Club</label>
 							</li>
 							<li>
-								<input type="checkbox" id="half" value="Half is Easy" name="options[]">
+								<input type="checkbox" id="half" value="Half is Easy" data-workout-type="speed" name="options[]">
 								<label for="half">Half is Easy</label>
 							</li>
 							<li>
-								<input type="checkbox" id="hell" value="Hell Hath No Fury" name="options[]">
+								<input type="checkbox" id="hell" value="Hell Hath No Fury" data-workout-type="endurance" name="options[]">
 								<label for="hell">Hell Hath No Fury</label>
 							</li>
 							<li>
-								<input type="checkbox" id="islagiatt" value="It Seems Like A Good Idea At The Time" name="options[]">
+								<input type="checkbox" id="islagiatt" value="It Seems Like A Good Idea At The Time" data-workout-type="endurance" name="options[]">
 								<label for="islagiatt">ISLAGIATT</label>
 							</li>
 							<li>
-								<input type="checkbox" id="local" value="Local Hero" name="options[]">
+								<input type="checkbox" id="local" value="Local Hero" data-workout-type="racing" name="options[]">
 								<label for="local">Local Hero</label>
 							</li>
 							<li>
-								<input type="checkbox" id="nine" value="Nine Hammers" name="options[]">
+								<input type="checkbox" id="nine" value="Nine Hammers" data-workout-type="speed" name="options[]">
 								<label for="nine">Nine Hammers</label>
 							</li>
 							<li>
-								<input type="checkbox" id="revo" value="Revolver (Cycling)" name="options[]">
+								<input type="checkbox" id="revo" value="Revolver (Cycling)" data-workout-type="speed" name="options[]">
 								<label for="revo">Revolver (Cycling)</label>
 							</li>
 							<li>
-								<input type="checkbox" id="revorun" value="Revolver (Running)" name="options[]">
+								<input type="checkbox" id="revorun" value="Revolver (Running)" data-workout-type="speed" name="options[]">
 								<label for="revorun">Revolver (Running)</label>
 							</li>
 							<li>
-								<input type="checkbox" id="rubber" value="Rubber Glove" name="options[]">
+								<input type="checkbox" id="rubber" value="Rubber Glove" data-workout-type="timetrial" name="options[]">
 								<label for="rubber">Rubber Glove</label>
 							</li>
 							<li>
@@ -108,11 +108,11 @@
 								<label for="steam">Steamroller</label>
 							</li>
 							<li>
-								<input type="checkbox" id="hunted" value="The Hunted" name="options[]">
+								<input type="checkbox" id="hunted" value="The Hunted" data-workout-type="climbing" name="options[]">
 								<label for="hunted">The Hunted</label>
 							</li>
 							<li>
-								<input type="checkbox" id="scream" value="The Long Scream" name="options[]">
+								<input type="checkbox" id="scream" value="The Long Scream" data-workout-type="timetrial" name="options[]">
 								<label for="scream">The Long Scream</label>
 							</li>
 							<li>
@@ -120,22 +120,55 @@
 								<label for="machine">The Machine</label>
 							</li>
 							<li>
-								<input type="checkbox" id="rookie" value="The Rookie" name="options[]">
+								<input type="checkbox" id="rookie" value="The Rookie" data-workout-type="racing" name="options[]">
 								<label for="rookie">The Rookie</label>
 							</li>
 							<li>
-								<input type="checkbox" id="wretched" value="The Wretched" name="options[]">
+								<input type="checkbox" id="wretched" value="The Wretched" data-workout-type="climbing" name="options[]">
 								<label for="wretched">The Wretched</label>
 							</li>
 							<li>
-								<input type="checkbox" id="notry" value="There is no try" name="options[]">
+								<input type="checkbox" id="notry" value="There is no try" data-workout-type="speed" name="options[]">
 								<label for="notry">There is no try</label>
 							</li>
 							<li>
-								<input type="checkbox" id="violator" value="Violator" name="options[]">
+								<input type="checkbox" id="violator" value="Violator" data-workout-type="speed" name="options[]">
 								<label for="violator">Violator</label>
 							</li>
 						</ol>
+
+						<div class="more-options">
+							<div class="workout-type">
+								<p>Select by workout type:</p>
+								<ul>
+									<li>
+										<input type="checkbox" class="select-workout-type" id="workout-speed" data-check-workout-type="speed">
+										<label for="workout-speed">Speed</label>
+									</li>
+									<li>
+										<input type="checkbox" class="select-workout-type" id="workout-timetrial" data-check-workout-type="timetrial">
+										<label for="workout-timetrial">Time Trial</label>
+									</li>
+									<li>
+										<input type="checkbox" class="select-workout-type" id="workout-endurance" data-check-workout-type="endurance">
+										<label for="workout-endurance">Endurance</label>
+									</li>
+									<li>
+										<input type="checkbox" class="select-workout-type" id="workout-climbing" data-check-workout-type="climbing">
+										<label for="workout-climbing">Climbing</label>
+									</li>
+									<li>
+										<input type="checkbox" class="select-workout-type" id="workout-racing" data-check-workout-type="racing">
+										<label for="workout-racing">Racing</label>
+									</li>
+									<li>
+										<input type="checkbox" class="select-workout-type" id="workout-style" data-check-workout-type="style">
+										<label for="workout-style">Style</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+
 					<div class="actions">
 						<button class="randomVid">Pain-Shake me, baby !</button>
 					</div>

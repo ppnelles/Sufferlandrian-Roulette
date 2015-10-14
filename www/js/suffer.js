@@ -38,5 +38,13 @@ $(".reset").click(function(){
 })
 
 $("#selectall").change(function(){
-    $("input").prop('checked', $(this).prop("checked"));
+    $(".more-options input").prop('checked', false);
+    $(".all-videos input, #selectall").prop('checked', $(this).prop("checked"));
+});
+
+$(".select-workout-type").change(function(){
+    var workouttype = $(this).data("check-workout-type");
+    $("input").prop('checked', false);
+    $(this).prop('checked', true);
+    $(".all-videos input[data-workout-type='"+workouttype+"']").prop('checked', true);
 });
