@@ -93,7 +93,7 @@ h6 b {
 }
 h1 {
   font-size: 160%;
-  line-height: 1.8em;
+  line-height: 1em;
   text-transform: uppercase;
   width: 90%;
   text-align: center;
@@ -112,10 +112,13 @@ h1:before {
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-  margin: 0 auto;
+  margin: 0 auto 0.8em;
 }
 h1 b {
   font-size: 220%;
+  line-height: 1em;
+  position: relative;
+  top: -1px;
 }
 ul,
 ol {

@@ -3,7 +3,7 @@ $(window).load(function() {
         var stored = JSON.parse(localStorage["videos"]);
 
         for (i=0; i!=stored.length;i++) {
-            var checkbox = $("input[type='checkbox'][value='"+stored[i]+"']");
+            var checkbox = $("li input[type='checkbox'][value='"+stored[i]+"']");
             checkbox.attr("checked","checked");
         }
     }
@@ -15,16 +15,14 @@ $(".randomVid").click(function(){
         return this.value;
     }).toArray();
         
+    var orders = ["GvA orders you to do -painshake-", "Do -painshake- or get flogged by minions", "Fluffy is hungry, do -painshake- or else", "Don't be a wretched, do -painshake-", "Do -painshake- and beat your inner couchlandrian", "Minions ask nicely: Do -painshake- or get flogged", "A couchlandrian says that you can't do -painshake- prove him wrong !", "Do -painshake- and suffer, suffer, suffer", "No donuts for you. -painshake- instead !", "Beat your own ass with -painshake- or they'll kick it later..."];
+    
     var video = videos[Math.floor(Math.random()*videos.length)];
+    var order = orders[Math.floor(Math.random()*orders.length)]; 
+    var result = order.replace('-painshake-','<b id="painshake">'+video+'</b>');
 
     if (video != null) {
-	    var commands = $("#commands li").map(function() {
-			return $(this).html().replace('-painshake-','<b id="painshake">'+video+'</b>');	    
-	    });
-		var command = commands[Math.floor(Math.random()*commands.length)];
-	    
-	    
-    	$('#results h1').html(command);
+    	$('#results h1').html(result);
         $('body').attr('class','result');
     }
     else {
