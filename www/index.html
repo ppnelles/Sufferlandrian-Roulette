@@ -36,92 +36,162 @@
 						<div class="select-all">
 							<input type="checkbox" id="selectall">
 							<label for="selectall">Select/Unselect All</label>
+							<div class="filters">
+								<input type="checkbox" id="cycling">
+								<label for="cycling">Cycling</label>
+								<input type="checkbox" id="running">
+								<label for="running">Running</label>
+								<div class="cycling">
+									<label for="cycling_base">
+										<input type="checkbox" id="cycling_base">
+										Base
+									</label>
+									<label for="cycling_climbing">
+										<input type="checkbox" id="cycling_climbing">
+										Climbing
+									</label>
+									<label for="cycling_endurance">
+										<input type="checkbox" id="cycling_endurance">
+										Endurance
+									</label>
+									<label for="cycling_fitness">
+										<input type="checkbox" id="cycling_fitness">
+										Fitness
+									</label>
+									<label for="cycling_racing">
+										<input type="checkbox" id="cycling_racing">
+										Racing
+									</label>
+									<label for="cycling_speed">
+										<input type="checkbox" id="cycling_speed">
+										Speed
+									</label>
+									<label for="cycling_style">
+										<input type="checkbox" id="cycling_style">
+										Style
+									</label>
+									<label for="cycling_timetrial">
+										<input type="checkbox" id="cycling_timetrial">
+										Time Trial
+									</label>
+								</div>
+								<div class="running">
+									<label for="running_hills">
+										<input type="checkbox" id="running_hills">
+										Hills
+									</label>
+									<label for="running_racing">
+										<input type="checkbox" id="running_racing">
+										Racing
+									</label>
+									<label for="running_speed">
+										<input type="checkbox" id="running_speed">
+										Speed
+									</label>
+								</div>
+							</div>
 						</div>
 
 						<ol>
-							<li>
+							<li class="cycling cycling_speed">
 								<input type="checkbox" id="avp" value="A Very Dark Place" name="options[]">
 								<label for="avp">A Very Dark Place</label>
 							</li>
-							<li>
+							<li class="cycling cycling_climbing cycling_endurance">
 								<input type="checkbox" id="angels" value="Angels" name="options[]">
 								<label for="angels">Angels</label>
 							</li>
-							<li>
+							<li class="cycling cycling_endurance">
 								<input type="checkbox" id="blender" value="Blender" name="options[]">
 								<label for="blender">Blender</label>
 							</li>
-							<li>
+							<li  class="running running_racing">
 								<input type="checkbox" id="chrys" value="Chrysalis" name="options[]">
 								<label for="chrys">Chrysalis</label>
 							</li>
-							<li>
+							<li class="cycling cycling_speed">
+								<input type="checkbox" id="dayt" value="Do As You Are Told" name="options[]">
+								<label for="dayt">Do As You Are Told</label>
+							</li>
+							<li class="cycling cycling_speed">
 								<input type="checkbox" id="downward" value="Downward Spiral" name="options[]">
 								<label for="downward">Downward Spiral</label>
 							</li>
-							<li>
+							<li class="cycling cycling_style cycling_base">
 								<input type="checkbox" id="elements" value="Elements of style" name="options[]">
 								<label for="elements">Elements of style</label>
 							</li>
-							<li>
+							<li class="cycling cycling_racing">
 								<input type="checkbox" id="extra" value="Extra Shot" name="options[]">
 								<label for="extra">Extra Shot</label>
 							</li>
-							<li>
+							<li class="cycling cycling_racing">
 								<input type="checkbox" id="fight" value="Fight Club" name="options[]">
 								<label for="fight">Fight Club</label>
 							</li>
-							<li>
+							<li class="cycling cycling_speed">
 								<input type="checkbox" id="half" value="Half is Easy" name="options[]">
 								<label for="half">Half is Easy</label>
 							</li>
-							<li>
+							<li class="cycling cycling_endurance">
 								<input type="checkbox" id="hell" value="Hell Hath No Fury" name="options[]">
 								<label for="hell">Hell Hath No Fury</label>
 							</li>
-							<li>
+							<li class="cycling cycling_endurance">
 								<input type="checkbox" id="islagiatt" value="It Seems Like A Good Idea At The Time" name="options[]">
 								<label for="islagiatt">ISLAGIATT</label>
 							</li>
-							<li>
+							<li class="cycling cycling_racing">
 								<input type="checkbox" id="local" value="Local Hero" name="options[]">
 								<label for="local">Local Hero</label>
 							</li>
-							<li>
+							<li class="cycling cycling_climbing">
+								<input type="checkbox" id="power" value="Power Station" name="options[]">
+								<label for="power">Power Station</label>
+							</li>
+							<li class="cycling cycling_speed">
 								<input type="checkbox" id="nine" value="Nine Hammers" name="options[]">
 								<label for="nine">Nine Hammers</label>
 							</li>
-							<li>
+							<li class="cycling cycling_speed">
 								<input type="checkbox" id="revo" value="Revolver (Cycling)" name="options[]">
 								<label for="revo">Revolver (Cycling)</label>
 							</li>
-							<li>
+							<li class="running running_speed">
 								<input type="checkbox" id="revorun" value="Revolver (Running)" name="options[]">
 								<label for="revorun">Revolver (Running)</label>
 							</li>
-							<li>
+							<li class="cycling cycling_timetrial cycling_style cycling_fitness">
 								<input type="checkbox" id="rubber" value="Rubber Glove" name="options[]">
 								<label for="rubber">Rubber Glove</label>
 							</li>
-							<li>
+							<li class="running running_speed">
 								<input type="checkbox" id="steam" value="Steamroller" name="options[]">
 								<label for="steam">Steamroller</label>
 							</li>
-							<li>
+							<li class="cycling cycling_racing">
+								<input type="checkbox" id="tbtitw" value="The Best Thing In The World" name="options[]">
+								<label for="tbtitw">The Best Thing In The World</label>
+							</li>
+							<li class="cycling cycling_climbing">
 								<input type="checkbox" id="hunted" value="The Hunted" name="options[]">
 								<label for="hunted">The Hunted</label>
 							</li>
-							<li>
+							<li class="cycling cycling_timetrial">
 								<input type="checkbox" id="scream" value="The Long Scream" name="options[]">
 								<label for="scream">The Long Scream</label>
 							</li>
-							<li>
+							<li class="running running_hills">
 								<input type="checkbox" id="machine" value="The Machine" name="options[]">
 								<label for="machine">The Machine</label>
 							</li>
-							<li>
+							<li class="cycling cycling_racing">
 								<input type="checkbox" id="rookie" value="The Rookie" name="options[]">
 								<label for="rookie">The Rookie</label>
+							</li>
+							<li class="cycling cycling_base">
+								<input type="checkbox" id="two" value="The Way Out" name="options[]">
+								<label for="wretched">The Way Out</label>
 							</li>
 							<li>
 								<input type="checkbox" id="wretched" value="The Wretched" name="options[]">
@@ -129,7 +199,11 @@
 							</li>
 							<li>
 								<input type="checkbox" id="notry" value="There is no try" name="options[]">
-								<label for="notry">There is no try</label>
+								<label for="notry">There Is No Try</label>
+							</li>
+							<li>
+								<input type="checkbox" id="tgttos" value="To Get To The Other Side" name="options[]">
+								<label for="tgttos">To Get To The Other Side</label>
 							</li>
 							<li>
 								<input type="checkbox" id="violator" value="Violator" name="options[]">

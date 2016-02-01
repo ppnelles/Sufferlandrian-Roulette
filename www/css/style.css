@@ -195,6 +195,14 @@ section {
 .videos div.select-all {
   margin: 0 0 1.5em;
 }
+
+
+div.filters,
+div.filters > div {
+  margin-left: 2em;
+  display: inline-block;
+}
+
 .videos div.actions {
   text-align: center;
 }

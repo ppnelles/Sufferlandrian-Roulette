@@ -1,4 +1,5 @@
 $(window).load(function() {
+    $("#selectall").change();
     if (localStorage["videos"] != null) {
         var stored = JSON.parse(localStorage["videos"]);
 
@@ -39,4 +40,17 @@ $(".reset").click(function(){
 
 $("#selectall").change(function(){
     $("input").prop('checked', $(this).prop("checked"));
+    $(".filters > input:checkbox").change();
+});
+
+$(".filters input:checkbox").change(function() {
+    var id = this.id;
+    var isChecked = $(this).prop("checked");
+    $('.filters .'+id)[isChecked?"show":"hide"]().find('input').prop("checked", isChecked);
+    $('.videos li.'+id+' input').prop("checked",isChecked);
+    if ($('.videos li input:not(:checked)').length == 0) {
+        $('#selectall').prop("checked",true);
+    } else {
+        $('#selectall').prop("checked",false);
+    }
 });
